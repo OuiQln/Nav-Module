@@ -5,7 +5,7 @@ USE uniqlo_inv;
 CREATE TABLE product(
   id INT NOT NULL AUTO_INCREMENT,
   product_typeid INT (255) NOT NULL,
-  priduct_price DECIMAL (65) NOT NULL,
+  product_price DECIMAL (65) NOT NULL,
   product_image VARCHAR(100) NOT NULL,
   product_description VARCHAR (50) NOT NULL,
   PRIMARY KEY (id)

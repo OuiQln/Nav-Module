@@ -1,0 +1,83 @@
+/* add all your styles inside, 
+then import the stylesheet and rference the styles
+within your JSX via className of id attributes */
+/* .promp-banner span {
+
+} */
+.topbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.freeShipping {
+  display: flex;
+  flex-direction: row;
+  flex: 50;
+  font-size: 15px;
+  color: red;
+  font-family: UniqloProBold,"Helvetica Neue",Helvetica, Arial,sans-serif;
+  margin: 0;
+  font-weight:bold;
+  margin-top: 3px;
+}
+.promobar {
+  display: flex;
+  justify-content: space-around;
+}
+.boximage {
+  float: left;
+}
+.baroption {
+  display: flex;
+  justify-content: space-evenly;
+  color: black;
+  width: 50%;
+  text-decoration: none;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: .21px;
+  text-transform: uppercase;
+  border: none;
+  text-decoration:none;
+
+  /* margin-top: 3px; */
+  /* position: relative; */
+  /* top: -3px; */
+  padding-left: 3px;
+  font-family: "Helvetica Neue",Helvetica, Arial,sans-serif;
+  /* float:right; */
+}
+.line {
+  width: 100%;
+  border-bottom: 1px solid rgba(197, 194, 194, 0.993);
+  top: 40px;
+  position: absolute;
+
+}
+.verticalLine {
+  content: '';
+  width: 0;
+  height: 4.8%;
+  position: absolute;
+  border: 0.6px solid rgba(197, 194, 194, 0.993);
+  top: 0;
+  left: 1300px;
+
+}
+.login {
+  display: flex;
+  color: gray;
+  font-size: 14px;
+  font-family: "Helvetica Neue",Helvetica, Arial,sans-serif;
+  letter-spacing: .3px;
+  margin: 4px 0 0 -6px;
+  font-weight:bold;
+}
+.a{
+  text-decoration:none;
+  color: inherit; 
+}
+.a:hover{
+  color:red;
+}
