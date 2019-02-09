@@ -15,7 +15,7 @@ const TopBar= (props)=> {
       </div>
 
       <div className={fs.baroption}>
-        <div  >
+        <div>
           <a href="" className={fs.a}><strong className={fs.promobar}><img src="https://s3-us-west-1.amazonaws.com/uniqloassets/get10-icon.png" alt='img' width="25" height="20" margin="10px" />GET $10</strong></a>
         </div>
         <div>

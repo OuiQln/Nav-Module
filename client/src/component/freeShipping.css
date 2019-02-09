@@ -10,6 +10,9 @@ within your JSX via className of id attributes */
   justify-content: space-around;
   margin: 0 auto;
 }
+.boximage {
+  float: left;
+}
 .freeShipping {
   display: flex;
   flex-direction: row;
@@ -24,9 +27,6 @@ within your JSX via className of id attributes */
 .promobar {
   display: flex;
   justify-content: space-around;
-}
-.boximage {
-  float: left;
 }
 .baroption {
   display: flex;
