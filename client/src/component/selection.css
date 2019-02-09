@@ -1,0 +1,20 @@
+.container { 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.logoLink {
+  /* display: flex; */
+  /* justify-content: space-around; */
+  /* flex:50; */
+  width: 20%;
+  height:20%;
+  margin-top: 20px;
+  float: left;
+
+}
+.tags {
+  
+}
