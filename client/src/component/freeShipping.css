@@ -11,7 +11,7 @@ within your JSX via className of id attributes */
   margin: 0 auto;
 }
 .boximage {
-  float: left;
+  margin-left: 85px;
 }
 .freeShipping {
   display: flex;
@@ -20,9 +20,9 @@ within your JSX via className of id attributes */
   font-size: 15px;
   color: red;
   font-family: UniqloProBold,"Helvetica Neue",Helvetica, Arial,sans-serif;
-  margin: 0;
+  margin-left: 110px;
   font-weight:bold;
-  margin-top: 3px;
+  margin-top: -23px;
 }
 .promobar {
   display: flex;
@@ -30,9 +30,10 @@ within your JSX via className of id attributes */
 }
 .baroption {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   color: black;
-  width: 50%;
+  /* flex-grow: 0.1; */
+  width: 40%;
   text-decoration: none;
   overflow: hidden;
   font-size: 14px;
@@ -42,6 +43,7 @@ within your JSX via className of id attributes */
   text-decoration:none;
   padding-left: 3px;
   font-family: "Helvetica Neue",Helvetica, Arial,sans-serif;
+
 }
 .line {
   width: 100%;
@@ -58,7 +60,7 @@ within your JSX via className of id attributes */
   border: 0.6px solid rgba(197, 194, 194, 0.993);
   top: 0;
   /* margin: 89% */
-  left: 1400px;
+  margin-left: 27%;
   position: absolute;
 
 }
@@ -68,7 +70,7 @@ within your JSX via className of id attributes */
   font-size: 14px;
   font-family: "Helvetica Neue",Helvetica, Arial,sans-serif;
   letter-spacing: .3px;
-  margin: 4px 0 0 -6px;
+  margin-right: 9%;
   font-weight:bold;
 }
 .a{

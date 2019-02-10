@@ -1,31 +1,20 @@
 .container { 
   display: flex;
   flex-direction: row;
-  /* justify-content: space-evenly; */
-  margin: 0 auto;
 }
 
 .logoLink {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: flex-start; */
-
-  /* justify-content: space-around; */
-  /* flex:100; */
-  /* width: 20%;
-  height:20%; */
-  flex-grow:1;
+  flex-grow:3;
   margin-top: 100%;
   float: left;
-  margin: 25px 50px 75px 65px;
+  margin: 25px 50px 75px 140px;
 
 }
 .tags {
   display: flex;
   justify-content: space-between;
   margin: 1%;
-  flex-grow:0.1;
-  margin-top: 40px;
+  margin-top: 43px;
   color: black;
   width: 30%;
   font-size: 14px;
@@ -41,13 +30,57 @@
   display: flex;
   justify-content: space-around;
 }
+.searchbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 9%;
+  flex-grow:2;
+
+  color: #bebebe!important;
+  background-color: #FFF;
+  font-family: UniqloProBold,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  height: 50px;
+  width: 23%;
+  margin-top: 30px;
+  border: 3px solid #bebebe!important;
+  box-sizing: border-box;
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 30px;
+}
+.searchtext {
+  margin-top: 10px;
+}
+.searchmarker {
+  margin-top: 10px;
+  width: 8%;
+
+}
 .sale {
   color:red;
 }
-.a{
+.a {
   text-decoration:none;
   color: inherit; 
 }
-.a:hover{
+.a:hover {
   color:red;
+}
+.shippingbag {
+  margin-left: 33.3%;
+  margin-top: 1.5%
+}
+.a1 {
+  text-decoration:none;
+  color: inherit; 
+}
+.description {
+  /* position: absolute; */
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+}
+.a1:hover .description{
+  visibility: visible;
+  opacity: 1;
 }

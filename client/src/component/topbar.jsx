@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 //import styles from "" will need to import the styles.css file
 // import promobox from '../../dist/promo-box.png';
 import fs from "./freeShipping.css";
-import CssModules from 'react-css-modules';
 const TopBar= (props)=> {
   return(
     <div className={fs.topbar}>

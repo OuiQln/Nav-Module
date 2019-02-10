@@ -1,12 +1,13 @@
 //stateless
 import React from 'react';
 import sl from './selection.css';
+import Search from './Search.jsx';
 const Directions=()=> {
   return(
     <div className={sl.container}>
       <div className="direction">
         <a href="" className={sl.logoLink}>
-          <img src="https://s3-us-west-1.amazonaws.com/uniqloassets/logo.png" alt="logo" width="90px" height="45px" />
+          <img src="https://s3-us-west-1.amazonaws.com/uniqloassets/logo.png" alt="logo" width="120px" height="60px" />
         </a>
       </div>
 
@@ -33,6 +34,17 @@ const Directions=()=> {
           <a href="" className={sl.a}><strong >SALE</strong></a>
         </div>
 
+      </div>
+
+      <div>
+        <Search />
+      </div>
+
+      <div className={sl.shippingbag}>
+        <div>
+          <a href="" className={sl.a1}><img src="https://s3-us-west-1.amazonaws.com/uniqloassets/shippingbag.png" alt="bag" width="64px" height="60px" /></a>
+          <p className={sl.description}>YOUR BAG IS EMPTY.</p>
+        </div>
       </div>
     </div>
   )
