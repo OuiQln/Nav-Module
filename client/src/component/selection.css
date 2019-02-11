@@ -74,13 +74,37 @@
   text-decoration:none;
   color: inherit; 
 }
-.description {
-  /* position: absolute; */
+
+.box {
+  display: none;
+}
+
+.box:after {
+  content: " ";
+  position: absolute;
+  right: 20px;
+  top: -15px;
+  border-top: none;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid #cecece;
+  /* display: block; */
+}
+
+.shippingbag:hover .box {
+  width: 170px;
+  height: 20px;
+  border: 3px solid #cecece;
+  background-color: white;
   color: black;
-  visibility: hidden;
-  opacity: 0;
-}
-.a1:hover .description{
-  visibility: visible;
-  opacity: 1;
-}
+  padding: 10px;
+  font-family: UniqloProBold,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #000;
+  text-align: center;
+  font-size: 13px;
+  text-transform: uppercase;
+  position: relative;
+  margin-left: -130px;
+  margin-top: 10px;
+  display: block;  
+} 

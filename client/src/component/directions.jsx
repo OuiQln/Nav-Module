@@ -43,7 +43,9 @@ const Directions=()=> {
       <div className={sl.shippingbag}>
         <div>
           <a href="" className={sl.a1}><img src="https://s3-us-west-1.amazonaws.com/uniqloassets/shippingbag.png" alt="bag" width="64px" height="60px" /></a>
-          <p className={sl.description}>YOUR BAG IS EMPTY.</p>
+        </div>
+        <div className={sl.box} >
+          <strong>YOUR BAG IS EMPTY.</strong>
         </div>
       </div>
     </div>
