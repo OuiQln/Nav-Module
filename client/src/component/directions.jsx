@@ -210,7 +210,7 @@ const Directions=()=> {
         </div>
 
         <div className={sl.dropdown}>
-          <a href="" className={sl.a}><strong className={sl.choices}>SALE</strong></a>
+          <a href="" className={sl.a}><strong className={sl.sale}>SALE</strong></a>
           <div className={sl.saleselection}>
             <a href="">SALE</a>
             <a href="">View All ></a>
