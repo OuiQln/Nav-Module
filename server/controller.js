@@ -4,7 +4,14 @@ module.exports = {
   product: {
     get: (req, res) => {
       console.log('in get');
-      db.product.get()
+      const product_type = req.params.product_type;
+      db.product.get(product_type, (err, results)=> {
+        if (err) {
+          res.status(404).send(err)
+        } else {
+          res.status(200).send(results)
+        }
+      })
     }
     
   }

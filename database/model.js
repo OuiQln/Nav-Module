@@ -2,10 +2,10 @@ const connection = require('./index.js');
 
 module.exports = {
   product: {
-    get: function (callback) {
+    get: function (type, callback) {
       console.log('db in get')
-      const queryStr = "select * from products";
-      connection.query(queryStr, (err, results) => {
+      const queryStr = "select * from product where product_type= ? ";
+      connection.query(queryStr, type, (err, results) => {
         if (err) {
           callback(err, null)
         } else {
@@ -13,17 +13,6 @@ module.exports = {
         }
       })
     }
-  // product_type: {
-  //   get: function (callback) {
-  //     console.log('db in get')
-  //     const queryStr = "select * from products_type";
-  //     connection.query(queryStr, (err, results) => {
-  //       if (err) {
-  //         callback(err, null)
-  //       } else {
-  //         callback(null, results);
-  //       }
-  //     })
   }
 
 }
