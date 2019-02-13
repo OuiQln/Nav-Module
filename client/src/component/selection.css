@@ -32,7 +32,8 @@
   display: flex;
   justify-content: space-evenly;
 }
-.searchbar {
+
+/* .searchbar {
   display: flex;
   justify-content: space-between;
   margin: 9%;
@@ -56,6 +57,49 @@
   margin-top: 10px;
   width: 8%;
 
+} */
+.searchbar {
+  display: flex;
+  justify-content: space-between;
+  color: #bebebe!important;
+  background-color: #FFF;
+  font-family: UniqloProBold,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  height: 50px;
+  width: 23%;
+  margin-top: 30px;
+  margin-left: 100px;
+  border: 3px solid #bebebe!important;
+  box-sizing: border-box;
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 30px;
+  overflow: hidden;
+  outline:0;
+}
+/* 
+.searchIcon {
+  padding: 0.5rem;
+} */
+
+.searchBox {
+  border: 0;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  flex: 1;
+  font-size: 16px;
+  font-weight: bold;
+  outline:0;
+
+}
+.searchmarker {
+  margin-top: 10px;
+  width: 8%;
+}
+.searchbar .searchBox.middle:focus {
+    outline: 0;
+}
+.searchBox::-webkit-search-cancel-button{
+    position:relative;
+    right:-30px;    
 }
 .sale {
   color:red;
