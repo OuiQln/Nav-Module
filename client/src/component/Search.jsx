@@ -1,23 +1,48 @@
 import React from 'react';
 import sl from './selection.css';
 import axios from 'axios';
+const INPUT_TIMEOUT = 250;
 
 class Search extends React.Component {
   constructor() {
     super();
     this.state= {
       query: '',
-      list: []
+      list: [],
+      predictions: []
     }
     this.handleInput=this.handleInput.bind(this);
     this.fetchList=this.fetchList.bind(this); 
   }
+  getPredictions(value) {
+    // let's say that it's an API call
+    return [
+      'PANTS',
+      'SWEATER',
+      'SHIRTS',
+    ].filter(item => item.toUpperCase().indexOf(value.toUpperCase()) !== -1);
+  }
 
   handleInput (e) {
+    clearTimeout(this.timeout);// clear timeout when input changes value
+    const query=e.target.value;
     this.setState({
-      query: e.target.value
+      query
     })
-    console.log(this.state.query);
+    // console.log(this.state.query);
+    if (query.length > 0) {
+      // make delayed api call
+      this.timeout = setTimeout(() => {
+        const predictions = this.getPredictions(query);
+        this.setState({
+          predictions
+        });
+      }, INPUT_TIMEOUT);
+    } else {
+      this.setState({
+        predictions: []
+      });
+    }
   }
   fetchList () {
     //get
@@ -35,28 +60,51 @@ class Search extends React.Component {
   }
 
   render(){
+
+    const listArr = this.state.list;
+
     return(
       <div className={sl.searchContainer}>
         <div className={sl.searchbar}>
           <form onSubmit={this.fetchList}>
-            <input class={sl.searchBox} type="search" name='pants' placeholder="Search" 
+            <input class={sl.searchBox} type="search" value={this.state.query} placeholder="Search" 
               onChange={this.handleInput}
               />
           </form>  
             <div className={sl.searchmarker}><img src="https://s3-us-west-1.amazonaws.com/uniqloassets/questionmark.png" alt="logo" width="25" height="25" /></div>
         </div>
-        
-        <div className={sl.dropdowns}>
-          <ul>
-            {this.state.list.map(item => {
+
+        <div className={sl.predict}>
+          {
+            this.state.predictions.map((item, index) => (
+              <div key={index + item}> DO YOU MEAN ? <br /> <br /> {item} <br /> <br /> 
+                CATEGORIES <br /> <br />
+                MEN > UNIQLO U > PANTS <br /> 
+                BOYS > PANTS AND SHORTS > PANTS <br /> 
+                BABY > PANTS AND LEGGINGS > PANTS <br /> 
+                MEN > FLEECE > BLOCKTECH FLEECE > <br /> 
+                PANTS<br /> 
+                MEN > PANTS <br /> 
+                WOMEN > PANTS <br /> 
+                GIRLS > ONLINE EXCLISIVES > PANTS <br /> 
+                MEN > THE 365 SHOP > PANTS 
+                
+              </div>
+            ))
+          }
+        </div> 
+
+        {listArr.length>0 && 
+          <div className={sl.dropdowns}>
+            {listArr.map(item => {
               return <div className={sl.itemlist}>
                 <img src={item.product_image} alt='img' width="120px" height="120px"/> 
                 <p> {item.product_description}</p>
-                <li>{item.product_price}</li>
+                {item.product_price}
               </div>
             })}
-          </ul>
-        </div>
+          </div>
+        }  
       </div>
     );
   }

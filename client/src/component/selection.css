@@ -377,7 +377,7 @@
   position: absolute;
   margin-left:50px;
   column-count: 4;
-
+  border-style: solid;
 }
 /* .itemlist {
   display:none;
@@ -387,4 +387,9 @@
   margin-left: 20px;
   z-index: 1;
 } */
+.predict {
+  position: absolute;
+  color:blue;
+  margin-top:100px;
+}
 
