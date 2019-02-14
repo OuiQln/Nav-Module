@@ -1,7 +1,7 @@
 import React from 'react';
 import sl from './selection.css';
 import axios from 'axios';
-const INPUT_TIMEOUT = 250;
+const INPUT_TIMEOUT = 400;
 
 class Search extends React.Component {
   constructor() {
@@ -79,21 +79,20 @@ class Search extends React.Component {
             this.state.predictions.map((item, index) => (
               <div key={index + item}> DO YOU MEAN ? <br /> <br /> {item} <br /> <br /> 
                 CATEGORIES <br /> <br />
-                MEN > UNIQLO U > PANTS <br /> 
-                BOYS > PANTS AND SHORTS > PANTS <br /> 
-                BABY > PANTS AND LEGGINGS > PANTS <br /> 
+                MEN > UNIQLO U > {item} <br /> 
+                BOYS > {item} AND SHORTS > {item} <br /> 
+                BABY > {item} AND LEGGINGS > {item} <br /> 
                 MEN > FLEECE > BLOCKTECH FLEECE > <br /> 
-                PANTS<br /> 
-                MEN > PANTS <br /> 
-                WOMEN > PANTS <br /> 
-                GIRLS > ONLINE EXCLISIVES > PANTS <br /> 
-                MEN > THE 365 SHOP > PANTS 
-                
+                {item}<br /> 
+                MEN > {item} <br /> 
+                WOMEN > {item} <br /> 
+                GIRLS > ONLINE EXCLISIVES > {item} <br /> 
+                MEN > THE 365 SHOP > {item} 
               </div>
             ))
           }
         </div> 
-
+ 
         {listArr.length>0 && 
           <div className={sl.dropdowns}>
             {listArr.map(item => {
