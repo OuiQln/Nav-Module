@@ -47,9 +47,8 @@ class Search extends React.Component {
   fetchList () {
     //get
     event.preventDefault();
-    const type=this.state.query;
     axios
-      .get(`/api/search/${type}`)
+      .get('/api/search', { params: { product_type: this.state.query } })
       .then(({ data }) => {
         this.setState({ list: data });
         console.log(this.state.list);
