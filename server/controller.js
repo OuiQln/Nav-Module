@@ -3,19 +3,14 @@ const db = require('../database/model.js');
 module.exports = {
   product: {
     get: (req, res) => {
-      console.log('in get');
-      const product_type = req.query.product_type;
-      console.log('controller', req.query)
-
-      console.log('controller', product_type)
-      db.product.get(product_type, (err, results)=> {
+      const { product_type } = req.query;
+      db.product.get(product_type, (err, results) => {
         if (err) {
-          res.status(404).send(err)
+          res.status(404).send(err);
         } else {
-          res.status(200).send(results)
+          res.status(200).send(results);
         }
-      })
-    }
-    
-  }
-}
+      });
+    },
+  },
+};
