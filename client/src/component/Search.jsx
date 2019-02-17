@@ -2,6 +2,7 @@ import React from 'react';
 import sl from './selection.css';
 import axios from 'axios';
 const INPUT_TIMEOUT = 400;
+const colors = ['#FF8042'];
 
 class Search extends React.Component {
   constructor() {
@@ -81,15 +82,14 @@ class Search extends React.Component {
                 this.state.predictions.map((item, index) => (
                   <div key={index + item}> DO YOU MEAN ? <br /> <br /> {item} <br /> <br /> 
                     CATEGORIES <br /> <br />
-                    MEN > UNIQLO U > {item} <br /> 
-                    BOYS > {item} AND SHORTS > {item} <br /> 
-                    BABY > {item} AND LEGGINGS > {item} <br /> 
-                    MEN > FLEECE > BLOCKTECH FLEECE > <br /> 
-                    {item}<br /> 
-                    MEN > {item} <br /> 
-                    WOMEN > {item} <br /> 
-                    GIRLS > ONLINE EXCLISIVES > {item} <br /> 
-                    MEN > THE 365 SHOP > {item} 
+                    <a href="" className={sl.links}>MEN > UNIQLO U > {item} <br /><br /></a>
+                    <a href="" className={sl.links}>BOYS > {item} AND SHORTS > {item} <br /><br /></a>
+                    <a href="" className={sl.links}>BABY > {item} AND LEGGINGS > {item} <br /><br /></a>
+                    <a href="" className={sl.links}>MEN > FLEECE > BLOCKTECH FLEECE > <br /> {item}<br /><br />  </a>
+                    <a href="" className={sl.links}>MEN > {item} <br /><br />  </a>
+                    <a href="" className={sl.links}>WOMEN > {item} <br /><br />  </a>
+                    <a href="" className={sl.links}>GIRLS > ONLINE EXCLISIVES > {item} <br /><br /></a>
+                    <a href="" className={sl.links}>MEN > THE 365 SHOP > {item} </a>
                   </div>
                 ))
               }
@@ -98,17 +98,21 @@ class Search extends React.Component {
             {listArr.length!==0 ?
               <div className={sl.dropdowns}>
                 <div className={sl.search_pro}>
-                  TOP RESULTS FOR {this.state.query}
-                  <button>VIEW ALL</button>
+                  <strong>
+                   TOP RESULTS FOR {this.state.query}
+                  </strong>
+                  <button className={sl.samplebutton}>VIEW ALL</button>
                 </div>
 
+                <div className={sl.pictures}>
                   {listArr.map(item => {
                     return <div className={sl.itemlist}>
-                      <img src={item.product_image} alt='img' width="120px" height="120px"/> 
-                      <p> {item.product_description}</p>
-                      {item.product_price}
+                      <img src={item.product_image} alt='img' width="140px" height="140px"/>
+                      {item.product_description}
+                      {item.product_price} <br /><br />
                     </div>
                   })}
+                </div>
               </div> : <div className={sl.notshow}></div>
             }  
           </div>
