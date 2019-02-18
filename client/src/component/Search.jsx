@@ -16,7 +16,6 @@ class Search extends React.Component {
     this.fetchList=this.fetchList.bind(this); 
   }
   getPredictions(value) {
-    // let's say that it's an API call
     return [
       'PANTS',
       'SWEATER',
@@ -60,9 +59,7 @@ class Search extends React.Component {
   }
 
   render(){
-
     const listArr = this.state.list;
-
     return(
       <div className={sl.searchContainer}>
         <div className={sl.searchbar}>
