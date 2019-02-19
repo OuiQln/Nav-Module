@@ -1,8 +1,18 @@
+const app = require('../server/index.js');
 const request = require('supertest');
-const app = require('../server/index.js')
-describe('Test the root path', () => {
-  test('It should response the GET method', async () => {
-    const response = await request(app).get('/search?:pants');
-    expect(response.statusCode).toBe(200);
+
+
+describe('The server should be defined', ()=> {
+  test('The server should be defined' , () => {
+    expect(app).toBeDefined();
   });
 })
+
+describe('Test the root path', () => {
+  test('It should response the GET method', () => {
+    return request(app).get("/").then(response => {
+      expect(response.statusCode).toBe(200)
+    })
+  });
+})
+
