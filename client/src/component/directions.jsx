@@ -234,9 +234,6 @@ const Directions = () => {
         </div>
       </div>
 
-      <div>
-        <Block />
-      </div>
     </div>
   );
 };
