@@ -144,7 +144,7 @@
 .dropdown:hover .womenselection {
   display: block;
   border: 1px solid #cecece;
-  width: 78.5%;
+  width: 79%;
   height: 50%;
   margin-left: -190px;;
   column-count: 4;
@@ -174,9 +174,9 @@
 .dropdown:hover .menselection {
   display: block;
   border: 1px solid #cecece;
-  width: 78.5%;
+  width: 79%;
   height: 50%;
-  margin-left: -280px;;
+  margin-left: -283px;;
   column-count: 4;
 }
 
@@ -204,9 +204,9 @@
 .dropdown:hover .girlselection {
   display: block;
   border: 1px solid #cecece;
-  width: 78.5%;
+  width: 79%;
   height: 50%;
-  margin-left: -350px;;
+  margin-left: -351px;;
   column-count: 4;
 }
 
@@ -234,9 +234,9 @@
 .dropdown:hover .boyselection {
   display: block;
   border: 1px solid #cecece;
-  width: 78.5%;
+  width: 79%;
   height: 50%;
-  margin-left: -426px;;
+  margin-left: -430px;;
   column-count: 4;
 }
 
@@ -264,9 +264,9 @@
 .dropdown:hover .babyselection {
   display: block;
   border: 1px solid #cecece;
-  width: 78.5%;
+  width: 79%;
   height: 50%;
-  margin-left: -500px;;
+  margin-left: -510px;;
   column-count: 4;
 }
 
@@ -294,9 +294,9 @@
 .dropdown:hover .newselection {
   display: block;
   border: 1px solid #cecece;
-  width: 78.5%;
+  width: 79%;
   height: 50%;
-  margin-left: -575px;;
+  margin-left: -585px;;
   column-count: 4;
 }
 .saleselection {
@@ -323,9 +323,9 @@
 .dropdown:hover .saleselection {
   display: block;
   border: 1px solid #cecece;
-  width: 78.5%;
+  width: 79%;
   height: 50%;
-  margin-left: -642px;;
+  margin-left: -652px;;
   column-count: 4;
 }
 
@@ -352,7 +352,6 @@
   border-right: 15px solid transparent;
   border-left: 15px solid transparent;
   border-bottom: 15px solid #cecece;
-  /* display: block; */
 }
 
 .shippingbag:hover .box {
@@ -380,14 +379,10 @@
   position: absolute;
   column-count: 4;
   border: 3px solid #cecece;
-    background-color: white;
+  background-color: white;
 
 
 }
-/* .predict .dropdowns{
-  position: absolute;
-  color:black;
-} */
 .predict {
   border: 3px solid #cecece;
   width: 20%;
@@ -396,7 +391,7 @@
   margin-top:85px;
   position: absolute;
   text-align: left;
-    background-color: white;
+  background-color: white;
 
 
 }
@@ -428,7 +423,6 @@
     line-height: 10px;
     border: 3px solid #000;
     background-color: #f2f2f2;
-    /* box-sizing: border-box; */
     text-align: center;
 }
 
