@@ -233,6 +233,7 @@ const Directions = () => {
           <strong>YOUR BAG IS EMPTY.</strong>
         </div>
       </div>
+
     </div>
   );
 };
