@@ -15,7 +15,6 @@ class Search extends React.Component {
     this.handleInput=this.handleInput.bind(this);
     this.fetchList=this.fetchList.bind(this); 
   }
-  
   getPredictions(value) {
     return [
       'PANTS',
@@ -23,7 +22,6 @@ class Search extends React.Component {
       'SHIRTS',
     ].filter(item => item.toUpperCase().indexOf(value.toUpperCase()) !== -1);
   }
-
   handleInput (e) {
     clearTimeout(this.timeout);// clear timeout when input changes value
     const query=e.target.value;
@@ -58,11 +56,15 @@ class Search extends React.Component {
         console.log(err);
       })
   }
-
   render(){
     const letterstyle = {
       color: "red"
     };
+    const pricestyle = {
+      fontSize:"16px"
+    }
+
+    
     const listArr = this.state.list;
     return(
       <div className={sl.searchContainer}>
@@ -79,9 +81,7 @@ class Search extends React.Component {
           <div className={sl.results}>
             <div className={sl.predict}>
               { 
-              
-                this.state.predictions.map((item, index) => (
-                  
+                this.state.predictions.map((item, index) => (                 
                   <div key={index + item}> DO YOU MEAN ? <br /> <br /> <letter style={letterstyle}>{item} </letter> <br /> <br /> 
                     CATEGORIES <br /> <br />
                     <a href="" className={sl.links}>MEN > UNIQLO U > <letter style={letterstyle}>{item}</letter> <br /><br /></a>
@@ -110,8 +110,8 @@ class Search extends React.Component {
                   {listArr.map(item => {
                     return <div className={sl.itemlist}>
                       <img src={item.product_image} alt='img' width="157px" height="157px"/>
-                      {item.product_description}
-                      {item.product_price} <br /><br />
+                      {item.product_description} <br /><br />
+                      <letter style={pricestyle}>{item.product_price}</letter> <br /><br />
                     </div>
                   })}
                 </div>
