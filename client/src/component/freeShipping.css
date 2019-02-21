@@ -47,7 +47,7 @@ within your JSX via className of id attributes */
 }
 .line {
   width: 100%;
-  border-bottom: 1px solid rgba(197, 194, 194, 0.993);
+  border-bottom:  1px solid #d4d2d2;
   top: 40px;
   position: absolute;
 
@@ -57,13 +57,11 @@ within your JSX via className of id attributes */
   width: 0;
   height: 4%;
   position: absolute;
-  border: 0.6px solid rgba(197, 194, 194, 0.993);
+  border:  1px solid #d4d2d2;
   top: 0;
-  /* margin: 89% */
   margin-left: 27%;
-  position: absolute;
-
 }
+
 .login {
   display: flex;
   color: gray;

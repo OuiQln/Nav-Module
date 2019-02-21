@@ -16,6 +16,8 @@ const Directions = () => {
       <div className={sl.tags}>
         <div className={sl.dropdown}>
           <a href className={sl.a}><strong className={sl.choices}>WOMEN</strong></a>
+          <div className={sl.verticalLine1}></div>
+          <div className={sl.horizontialLine1}></div>
           <div className={sl.womenselection}>
             <a href><strong>SHOP BY CATEGORY</strong></a>
             <a href>Outerwear and Blazers</a>
@@ -61,6 +63,9 @@ const Directions = () => {
 
         <div className={sl.dropdown}>
           <a href className={sl.a}><strong className={sl.choices}>MEN</strong></a>
+          <div className={sl.verticalLine2}></div>
+          <div className={sl.horizontialLine2}></div>
+
           <div className={sl.menselection}>
             <a href><strong>SHOP BY CATEGORY</strong></a>
             <a href>Outerwear and Blazers</a>
@@ -104,6 +109,9 @@ const Directions = () => {
         </div>
         <div className={sl.dropdown}>
           <a href className={sl.a}><strong className={sl.choices}>GIRLS</strong></a>
+          <div className={sl.verticalLine3}></div>
+          <div className={sl.horizontialLine3}></div>
+
           <div className={sl.girlselection}>
             <a href><strong>SHOP BY CATEGORY</strong></a>
             <a href>Outerwear</a>
@@ -136,6 +144,9 @@ const Directions = () => {
 
         <div className={sl.dropdown}>
           <a href className={sl.a}><strong className={sl.choices}>BOYS</strong></a>
+          <div className={sl.verticalLine4}></div>
+          <div className={sl.horizontialLine4}></div>
+
           <div className={sl.boyselection}>
             <a href><strong>SHOP BY CATEGORY</strong></a>
             <a href>Outerwear</a>
@@ -168,6 +179,9 @@ const Directions = () => {
 
         <div className={sl.dropdown}>
           <a href className={sl.a}><strong className={sl.choices}>BABY</strong></a>
+          <div className={sl.verticalLine5}></div>
+          <div className={sl.horizontialLine5}></div>
+
           <div className={sl.babyselection}>
             <a href><strong>SHOP BY CATEGORY</strong></a>
             <a href>Outerwear</a>
@@ -200,6 +214,9 @@ const Directions = () => {
 
         <div className={sl.dropdown}>
           <a href className={sl.a}><strong className={sl.choices}>NEW</strong></a>
+          <div className={sl.verticalLine6}></div>
+          <div className={sl.horizontialLine6}></div>
+
           <div className={sl.newselection}>
             <a href><strong>SHOP BY CATEGORY</strong></a>
             <a href>Magic For All</a>
@@ -212,6 +229,7 @@ const Directions = () => {
 
         <div className={sl.dropdown}>
           <a href className={sl.a}><strong className={sl.sale}>SALE</strong></a>
+          <div className={sl.horizontialLine7}></div>
           <div className={sl.saleselection}>
             <a href>SALE</a>
             <a href>View All></a>

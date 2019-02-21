@@ -14,14 +14,12 @@
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  margin: 1%;
   margin-top: 50px;
+  margin-left: -35px;
   color: black;
-  width: 30%;
+  width: 40%;
   font-size: 14px;
-  /* height: 100px; */
   letter-spacing: .21px;
-  /* text-transform: uppercase; */
   border: none;
   text-decoration:none;
   padding-left: 3px;
@@ -64,10 +62,10 @@
   color: #bebebe!important;
   background-color: #FFF;
   font-family: UniqloProBold,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  height: 50px;
-  width: 23%;
-  margin-top: 30px;
-  margin-left: 100px;
+  height: 53px;
+  width: 21%;
+  margin-top: 2%;
+  margin-left: 5.7%;
   border: 3px solid #bebebe!important;
   box-sizing: border-box;
   position: absolute;
@@ -79,23 +77,27 @@
 
 .searchBox {
   border: 0;
-  padding: 0.5rem 0.5rem 0.5rem 0;
+  padding: 0.7rem 2rem 2rem 0rem;
+  display: flex;
   flex: 1;
   font-size: 16px;
   font-weight: bold;
   outline:0;
+  overflow: hidden;
+  /* width:300px; */
+  float:right;
 
 }
 .searchmarker {
   margin-top: 10px;
-  width: 8%;
+  width: 3%;
 }
 .searchbar .searchBox.middle:focus {
-    outline: 0;
+  outline: 0;
 }
 .searchBox::-webkit-search-cancel-button{
-    position:relative;
-    right:-30px;    
+  /* position: relative; */
+  margin-left: 40%;    
 }
 .sale {
   color:red;
@@ -119,7 +121,30 @@
 .dropdown:hover .choices {
   color:red;
 }
+.horizontialLine1 {
+  display: none;
 
+}
+.horizontialLine2 {
+  display: none;
+
+}
+.horizontialLine3 {
+  display: none;
+
+}
+.horizontialLine4 {
+  display: none;
+
+}
+.horizontialLine5 {
+  display: none;
+
+}
+.horizontialLine6 {
+  display: none;
+
+}
 .womenselection {
   display:none;
   position: absolute;
@@ -146,10 +171,87 @@
   border: 1px solid #cecece;
   width: 79%;
   height: 50%;
-  margin-left: -190px;;
+  margin-left: -143px;
   column-count: 4;
 }
+.dropdown:hover .horizontialLine1 {
+  display: block;
+  content: '';
+  width: 5.7%;
+  height: 0;
+  position: absolute;
+  border: 2px solid red;
+  margin-top: 33px;
+  margin-left: -10px;
 
+}
+
+.dropdown:hover .horizontialLine2 {
+  display: block;
+  content: '';
+  width: 5.7%;
+  height: 0;
+  position: absolute;
+  border: 2px solid red;
+  margin-top: 33px;
+  margin-left: -25px;
+
+}
+.dropdown:hover .horizontialLine3 {
+  display: block;
+  content: '';
+  width: 5.7%;
+  height: 0;
+  position: absolute;
+  border: 2px solid red;
+  margin-top: 33px;
+  margin-left: -18px;
+
+}
+.dropdown:hover .horizontialLine4 {
+  display: block;
+  content: '';
+  width: 5.7%;
+  height: 0;
+  position: absolute;
+  border: 2px solid red;
+  margin-top: 33px;
+  margin-left: -24px;
+
+}
+.dropdown:hover .horizontialLine5 {
+  display: block;
+  content: '';
+  width: 5.7%;
+  height: 0;
+  position: absolute;
+  border: 2px solid red;
+  margin-top: 33px;
+  margin-left: -26px;
+
+}
+.dropdown:hover .horizontialLine6 {
+  display: block;
+  content: '';
+  width: 5.7%;
+  height: 0;
+  position: absolute;
+  border: 2px solid red;
+  margin-top: 33px;
+  margin-left: -30px;
+
+}
+.dropdown:hover .horizontialLine7 {
+  display: block;
+  content: '';
+  width: 5.7%;
+  height: 0;
+  position: absolute;
+  border: 2px solid red;
+  margin-top: 33px;
+  margin-left: -30px;
+
+}
 .menselection {
   display:none;
   position: absolute;
@@ -176,7 +278,7 @@
   border: 1px solid #cecece;
   width: 79%;
   height: 50%;
-  margin-left: -283px;;
+  margin-left: -262px;;
   column-count: 4;
 }
 
@@ -206,7 +308,7 @@
   border: 1px solid #cecece;
   width: 79%;
   height: 50%;
-  margin-left: -351px;;
+  margin-left: -360px;;
   column-count: 4;
 }
 
@@ -236,7 +338,7 @@
   border: 1px solid #cecece;
   width: 79%;
   height: 50%;
-  margin-left: -430px;;
+  margin-left: -465px;;
   column-count: 4;
 }
 
@@ -266,7 +368,7 @@
   border: 1px solid #cecece;
   width: 79%;
   height: 50%;
-  margin-left: -510px;;
+  margin-left: -570px;;
   column-count: 4;
 }
 
@@ -296,7 +398,7 @@
   border: 1px solid #cecece;
   width: 79%;
   height: 50%;
-  margin-left: -585px;;
+  margin-left: -670px;;
   column-count: 4;
 }
 .saleselection {
@@ -325,14 +427,69 @@
   border: 1px solid #cecece;
   width: 79%;
   height: 50%;
-  margin-left: -652px;;
+  margin-left: -767px;;
   column-count: 4;
+}
+.verticalLine1 {
+  content: '';
+  width: 0;
+  height: 5%;
+  position: absolute;
+  border: 1px solid #f2f2f2;
+  top: 6.5%;
+  margin-left: 5.6%;
+}
+.verticalLine2 {
+  content: '';
+  width: 0;
+  height: 5%;
+  position: absolute;
+  border: 1px solid #f2f2f2;
+  top: 6.5%;
+  margin-left: 4.3%;
+}
+.verticalLine3 {
+  content: '';
+  width: 0;
+  height: 5%;
+  position: absolute;
+  border: 1px solid #f2f2f2;
+  top: 6.5%;
+  margin-left: 4.8%;
+}
+.verticalLine4 {
+  content: '';
+  width: 0;
+  height: 5%;
+  position: absolute;
+  border: 1px solid #f2f2f2;
+  top: 6.5%;
+  margin-left: 4.5%;
+}
+
+.verticalLine5 {
+  content: '';
+  width: 0;
+  height: 5%;
+  position: absolute;
+  border: 1px solid #f2f2f2;
+  top: 6.5%;
+  margin-left: 4.4%;
+}
+.verticalLine6 {
+  content: '';
+  width: 0;
+  height: 5%;
+  position: absolute;
+  border: 1px solid #f2f2f2;
+  top: 6.5%;
+  margin-left: 4%;
 }
 
 
 .shippingbag {
-  margin-left: 33.3%;
-  margin-top: 1.5%
+  margin-left: 27.4%;
+  margin-top: 1.8%
 }
 .a1 {
   text-decoration:none;
@@ -372,28 +529,35 @@
   display: block;  
 } 
 .dropdowns{
-  width: 39.5%;
+  width: 41%;
   height: 70%;
-  margin-left: -180px;
+  margin-left: -241.5px;
   margin-top:85px;
   position: absolute;
   column-count: 4;
   border: 3px solid #cecece;
+  border-left: none;
   background-color: white;
 
 
 }
+.results {
+  text-align: center;
+}
 .predict {
+  display:inline-block;
   border: 3px solid #cecece;
-  width: 20%;
-  height: 70%;
-  margin-left: -520px;;
+  width: 22.5%;
+  height: 67.9%;
+  margin-left: -665px;;
   margin-top:85px;
   position: absolute;
   text-align: left;
   background-color: white;
-
-
+  font-weight: 600;
+  font-family: UniqloProBold,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  padding-left:40px;
+  padding-top: 20px;
 }
 
 .dropdowns .search_pro {
@@ -431,7 +595,7 @@
   color: black;
   margin-top:100px;
   column-count: 4;
-  margin-left: 20px;
+  margin-left: 5.5%;
 
 }
 /* .itemlist {
@@ -476,3 +640,5 @@
   vertical-align: middle;
   padding: 13px 0 16px;
 }
+
+

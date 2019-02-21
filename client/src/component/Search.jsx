@@ -1,8 +1,7 @@
 import React from 'react';
 import sl from './selection.css';
 import axios from 'axios';
-const INPUT_TIMEOUT = 400;
-const colors = ['#FF8042'];
+const INPUT_TIMEOUT = 200;
 
 class Search extends React.Component {
   constructor() {
@@ -69,7 +68,7 @@ class Search extends React.Component {
       <div className={sl.searchContainer}>
         <div className={sl.searchbar}>
           <form onSubmit={this.fetchList}>
-            <input class={sl.searchBox} type="search" value={this.state.query} placeholder="Search" 
+            <input class={sl.searchBox} type="text" value={this.state.query} placeholder="Search" 
               onChange={this.handleInput}
               />
           </form>  
@@ -110,7 +109,7 @@ class Search extends React.Component {
                 <div className={sl.pictures}>
                   {listArr.map(item => {
                     return <div className={sl.itemlist}>
-                      <img src={item.product_image} alt='img' width="140px" height="140px"/>
+                      <img src={item.product_image} alt='img' width="157px" height="157px"/>
                       {item.product_description}
                       {item.product_price} <br /><br />
                     </div>
