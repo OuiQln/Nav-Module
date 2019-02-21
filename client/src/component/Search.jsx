@@ -1,7 +1,7 @@
 import React from 'react';
 import sl from './selection.css';
 import axios from 'axios';
-const INPUT_TIMEOUT = 200;
+const INPUT_TIMEOUT = 100;
 
 class Search extends React.Component {
   constructor() {
@@ -20,6 +20,7 @@ class Search extends React.Component {
       'PANTS',
       'SWEATER',
       'SHIRTS',
+      'DRESS',
     ].filter(item => item.toUpperCase().indexOf(value.toUpperCase()) !== -1);
   }
   handleInput (e) {
@@ -42,12 +43,13 @@ class Search extends React.Component {
         predictions: []
       });
     }
+
   }
   fetchList () {
     //get
     event.preventDefault();
     axios
-      .get('/api/search', { params: { product_type: this.state.query } })
+      .get('/api/search', { params: { product_type: this.state.predictions } })
       .then(({ data }) => {
         this.setState({ list: data });
         console.log(this.state.list);
@@ -69,15 +71,15 @@ class Search extends React.Component {
     return(
       <div className={sl.searchContainer}>
         <div className={sl.searchbar}>
-          <form onSubmit={this.fetchList}>
+          <form onChange={this.fetchList}>
             <input class={sl.searchBox} type="text" value={this.state.query} placeholder="Search" 
-              onChange={this.handleInput}
+              onChange={(e) => {this.handleInput(e)}}
               />
           </form>  
             <div className={sl.searchmarker}><img src="https://s3-us-west-1.amazonaws.com/uniqloassets/questionmark.png" alt="logo" width="25" height="25" /></div>
         </div>
 
-        {this.state.query.length>2 && this.state.list!==0 &&
+        {this.state.query.length>2 &&
           <div className={sl.results}>
             <div className={sl.predict}>
               { 
