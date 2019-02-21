@@ -10,11 +10,13 @@ class Search extends React.Component {
     this.state= {
       query: '',
       list: [],
-      predictions: []
+      predictions: [],
+      color:''
     }
     this.handleInput=this.handleInput.bind(this);
     this.fetchList=this.fetchList.bind(this); 
   }
+  
   getPredictions(value) {
     return [
       'PANTS',
@@ -59,6 +61,9 @@ class Search extends React.Component {
   }
 
   render(){
+    const letterstyle = {
+      color: "red"
+    };
     const listArr = this.state.list;
     return(
       <div className={sl.searchContainer}>
@@ -73,20 +78,21 @@ class Search extends React.Component {
 
         {this.state.query.length>2 && this.state.list!==0 &&
           <div className={sl.results}>
-
             <div className={sl.predict}>
-              {
+              { 
+              
                 this.state.predictions.map((item, index) => (
-                  <div key={index + item}> DO YOU MEAN ? <br /> <br /> {item} <br /> <br /> 
+                  
+                  <div key={index + item}> DO YOU MEAN ? <br /> <br /> <letter style={letterstyle}>{item} </letter> <br /> <br /> 
                     CATEGORIES <br /> <br />
-                    <a href="" className={sl.links}>MEN > UNIQLO U > {item} <br /><br /></a>
-                    <a href="" className={sl.links}>BOYS > {item} AND SHORTS > {item} <br /><br /></a>
-                    <a href="" className={sl.links}>BABY > {item} AND LEGGINGS > {item} <br /><br /></a>
-                    <a href="" className={sl.links}>MEN > FLEECE > BLOCKTECH FLEECE > <br /> {item}<br /><br />  </a>
-                    <a href="" className={sl.links}>MEN > {item} <br /><br />  </a>
-                    <a href="" className={sl.links}>WOMEN > {item} <br /><br />  </a>
-                    <a href="" className={sl.links}>GIRLS > ONLINE EXCLISIVES > {item} <br /><br /></a>
-                    <a href="" className={sl.links}>MEN > THE 365 SHOP > {item} </a>
+                    <a href="" className={sl.links}>MEN > UNIQLO U > <letter style={letterstyle}>{item}</letter> <br /><br /></a>
+                    <a href="" className={sl.links}>BOYS > <letter style={letterstyle}>{item}</letter> AND SHORTS > <letter style={letterstyle}>{item}</letter> <br /><br /></a>
+                    <a href="" className={sl.links}>BABY > <letter style={letterstyle}>{item}</letter> AND LEGGINGS > <letter style={letterstyle}>{item}</letter> <br /><br /></a>
+                    <a href="" className={sl.links}>MEN > FLEECE > BLOCKTECH FLEECE > <br /> <letter style={letterstyle}>{item}</letter><br /><br />  </a>
+                    <a href="" className={sl.links}>MEN > <letter style={letterstyle}>{item}</letter> <br /><br />  </a>
+                    <a href="" className={sl.links}>WOMEN > <letter style={letterstyle}>{item}</letter> <br /><br />  </a>
+                    <a href="" className={sl.links}>GIRLS > ONLINE EXCLISIVES > <letter style={letterstyle}>{item}</letter> <br /><br /></a>
+                    <a href="" className={sl.links}>MEN > THE 365 SHOP > <letter style={letterstyle}>{item}</letter> </a>
                   </div>
                 ))
               }
