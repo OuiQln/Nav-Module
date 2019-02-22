@@ -26,17 +26,7 @@ class Search extends React.Component {
       'DRESS',
     ].filter(item => item.toUpperCase().indexOf(value.toUpperCase()) !== -1);
   }
-  // componentWillMount() {
-  //   document.addEventListener('mousedown', this.handleClick, false);
-  // }
-  // componentWillUnmount() {
-  //   document.removeEventListener('mousedown',this.handleClick, false);
-  // }
   handleClick() {
-    // if (this.node.contains(e.target)) {
-    //   return;
-    // }
-    // this.handleClickOutside();
     if (!this.state.result) {
       document.addEventListener('click', this.handleClickOutside, false);
     } else {
@@ -61,9 +51,7 @@ class Search extends React.Component {
     this.setState({
       query
     })
-    // console.log(this.state.query);
-    if (query.length > 0) {
-      // make delayed api call
+    if (query.length > 0) {      // make delayed api call
       this.timeout = setTimeout(() => {
         const predictions = this.getPredictions(query);
         this.setState({
@@ -97,8 +85,6 @@ class Search extends React.Component {
     const pricestyle = {
       fontSize:"16px"
     }
-
-    
     const listArr = this.state.list;
     return(
       <div className={sl.searchContainer}>
