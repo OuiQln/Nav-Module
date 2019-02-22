@@ -10,10 +10,13 @@ class Search extends React.Component {
       query: '',
       list: [],
       predictions: [],
-      color:''
+      color:'',
+      result:false
     }
-    this.handleInput=this.handleInput.bind(this);
-    this.fetchList=this.fetchList.bind(this); 
+    this.handleInput = this.handleInput.bind(this);
+    this.fetchList = this.fetchList.bind(this); 
+    this.handleClick = this.handleClick.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
   }
   getPredictions(value) {
     return [
@@ -22,6 +25,35 @@ class Search extends React.Component {
       'SHIRTS',
       'DRESS',
     ].filter(item => item.toUpperCase().indexOf(value.toUpperCase()) !== -1);
+  }
+  // componentWillMount() {
+  //   document.addEventListener('mousedown', this.handleClick, false);
+  // }
+  // componentWillUnmount() {
+  //   document.removeEventListener('mousedown',this.handleClick, false);
+  // }
+  handleClick() {
+    // if (this.node.contains(e.target)) {
+    //   return;
+    // }
+    // this.handleClickOutside();
+    if (!this.state.result) {
+      document.addEventListener('click', this.handleClickOutside, false);
+    } else {
+      document.removeEventListener('click',this.handleClickOutside, false)
+    }
+
+    this.setState(prevState => ({
+      result: !prevState.result,
+    }));
+  }
+
+  handleClickOutside(e) {
+    //ignore clicks on the component itself
+    if (this.node.contains(e.target)) {
+      return;
+    }
+    this.handleClick();
   }
   handleInput (e) {
     clearTimeout(this.timeout);// clear timeout when input changes value
@@ -73,13 +105,13 @@ class Search extends React.Component {
         <div className={sl.searchbar}>
           <form onChange={this.fetchList}>
             <input class={sl.searchBox} type="text" value={this.state.query} placeholder="Search" 
-              onChange={(e) => {this.handleInput(e)}}
+              onChange={(e) => {this.handleInput(e)}} onClick={this.handleClick}
               />
           </form>  
             <div className={sl.searchmarker}><img src="https://s3-us-west-1.amazonaws.com/uniqloassets/questionmark.png" alt="logo" width="25" height="25" /></div>
         </div>
 
-        {this.state.query.length>2 &&
+        {this.state.query.length>2 && this.state.result &&
           <div className={sl.results}>
             <div className={sl.predict}>
               { 
@@ -100,7 +132,7 @@ class Search extends React.Component {
             </div> 
     
             {listArr.length!==0 ?
-              <div className={sl.dropdowns}>
+            <div ref={node => this.node = node} className={sl.dropdowns}>
                 <div className={sl.search_pro}>
                   <strong>
                    TOP RESULTS FOR {this.state.query}
