@@ -5,4 +5,4 @@ terminal- shell commands:
   npm run build
   
 ## Demo
-![](QuiQlnDemo.gif)
+![](OuiQlnDemo.gif)
